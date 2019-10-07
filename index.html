@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app"> <!-- all vue.js code goes in this element -->
+    {{ message }}
+    <div>1st number: <input type="number" v-model="number1"></div>
+    <div>2nd number: <input type="number" v-model="number2"></div>
+    <div>3rd number: <input type="number" v-model="number3"></div>
+    <div>4th number: <input type="number" v-model="number4"></div>
+    <div>5th number: <input type="number" v-model="number5"></div>
+    <div>6th number: <input type="number" v-model="number6"></div>
+    <div>7th number: <input type="number" v-model="number7"></div>
+    <div>8th number: <input type="number" v-model="number8"></div>
+    <div><button v-on:click="calculationSum()">Compute sum</button></div>
+    <p>The result is: {{ sum }}</p>
+
+    <button v-on:click="toggleCloak()">Show Cloak</button>
+    <h3 v-if="showCloak">The Invisibility Cloak!</h3>
+
+    <button v-on:click="toggleInfo()">Show Info</button>
+    <h3 v-if="showInfo">You can see the infomation, it is right here.</h3>
+
+    <div v-for="movie in movies">{{ movie }}</div>
+    <div>
+      New Movie: <input type="text" v-model="newMovie">
+    </div>
+    <div>
+      <button v-on:click="addMovie()">Add Movie</button>
+    </div>
+
+  </div> <!-- end of vue.js elements -->
+  <script src="index.js"></script>
+</body>
+</html>
+
+<!-- v-model can only go inside an input. -->
